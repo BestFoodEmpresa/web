@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestFood</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-clock"></i> BestFood <i class="fas fa-utensils"></i></h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#news">Noticias</a></li>
+                <li><a href="#profile">Perfil</a></li>
+                <li><a href="#comments">Comentarios</a></li>
+                <li><a href="#games">Juegos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <div class="icon-container"><i class="fas fa-utensils"></i></div>
+        <p>BestFood se dedica a proporcionar soluciones alimenticias saludables y convenientes, optimizando el tiempo para estudiantes y oficinistas.</p>
+    </section>
+
+    <section id="services">
+        <h2>Servicios</h2>
+        <div class="icon-container"><i class="fas fa-concierge-bell"></i></div>
+        <p>Ofrecemos entrega de alimentos personalizados con información nutricional detallada, adaptados a los horarios de nuestros clientes.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Menú</h2>
+        <div class="icon-container"><i class="fas fa-hamburger"></i></div>
+        <div id="combo-personalization">
+            <h3>Personaliza tu Combo</h3>
+            <form id="combo-form">
+                <label for="main-dish">Plato Principal:</label>
+                <select id="main-dish" name="main-dish">
+                    <option value="pollo">Pollo</option>
+                    <option value="carne">Carne</option>
+                    <option value="vegetariano">Vegetariano</option>
+                </select>
+                <label for="side-dish">Acompañamiento:</label>
+                <select id="side-dish" name="side-dish">
+                    <option value="arroz">Arroz</option>
+                    <option value="ensalada">Ensalada</option>
+                    <option value="papas">Papas</option>
+                </select>
+                <label for="drink">Bebida:</label>
+                <select id="drink" name="drink">
+                    <option value="agua">Agua</option>
+                    <option value="jugo">Jugo</option>
+                    <option value="refresco">Refresco</option>
+                </select>
+                <button type="button" onclick="showCombo()">Ver Combo</button>
+            </form>
+            <div id="combo-result"></div>
+        </div>
+    </section>
+
+    <section id="news">
+        <h2>Noticias</h2>
+        <div class="icon-container"><i class="fas fa-newspaper"></i></div>
+        <div id="news-content">
+            <article>
+                <h3>Nueva Sede en el Norte</h3>
+                <p>Estamos emocionados de anunciar la apertura de nuestra nueva sede en el norte de la ciudad, para ofrecer mejor servicio a nuestros clientes.</p>
+            </article>
+            <article>
+                <h3>Alianzas con Productores Locales</h3>
+                <p>Hemos establecido nuevas alianzas con productores locales para asegurar ingredientes frescos y de alta calidad.</p>
+            </article>
+            <article>
+                <h3>Introducción de Nuevas Opciones Veganas</h3>
+                <p>BestFood ahora ofrece una variedad de opciones veganas para satisfacer a nuestros clientes que buscan alternativas más saludables y sostenibles.</p>
+            </article>
+            <article>
+                <h3>Programa de Reciclaje</h3>
+                <p>Hemos lanzado un programa de reciclaje para reducir nuestro impacto ambiental y promover prácticas sostenibles.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="profile">
+        <h2>Perfil</h2>
+        <div class="icon-container"><i class="fas fa-user"></i></div>
+        <form id="profile-form">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Crear Perfil</button>
+        </form>
+    </section>
+
+    <section id="comments">
+        <h2>Comentarios</h2>
+        <div class="icon-container"><i class="fas fa-comments"></i></div>
+        <div id="comments-section">
+            <form id="comment-form">
+                <label for="comment">Deja tu Comentario:</label>
+                <textarea id="comment" name="comment" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="comments-list">
+                <div class="comment">
+                    <p><strong>Ana Gómez:</strong> "La comida de BestFood ha mejorado mi vida. ¡Es deliciosa y saludable!"</p>
+                </div>
+                <div class="comment">
+                    <p><strong>Carlos Pérez:</strong> "Los combos personalizados son perfectos para mis horarios de oficina."</p>
+                </div>
+                <div class="comment">
+                    <p><strong>Luisa Martínez:</strong> "Me encanta que sean tan conscientes del medio ambiente. ¡Gran trabajo!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="games">
+        <h2>Juegos</h2>
+        <div class="icon-container"><i class="fas fa-gamepad"></i></div>
+        <div id="game-section">
+            <button onclick="spinWheel()">Gira la Ruleta y Gana Bonos</button>
+            <div id="wheel-result"></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <div class="icon-container"><i class="fas fa-envelope"></i></div>
+        <p>Email: contacto@bestfood.com</p>
+        <p>Teléfono: +57 123 456 7890</p>
+        <p>Dirección: Calle 123, Ciudad, País</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 BestFood. Todos los derechos reservados. <i class="fas fa-clock"></i> <i class="fas fa-utensils"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
